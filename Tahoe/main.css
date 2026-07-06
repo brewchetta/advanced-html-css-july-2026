@@ -1,3 +1,84 @@
+body {
+    background: #555;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.75;
+}
+
+h1, h2, h3 {
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+/* p tag that comes directly after h3 tag */
+h3 + p {
+    font-style: italic;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+a {
+    color: #2985d1;
+    text-decoration: none;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+nav li a {
+    background: #aaa;
+    border-radius: 8px;
+}
+
+nav li a:hover {
+    background: #888;
+}
+
+nav a:hover, 
+nav a:focus {
+    color: #97d0f2;
+}
+
+/* create a new pseudo element with the ☆ in it */
+nav li a::before {
+    content: "☆"
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
 img {
     /* don't get bigger than 100% the size of your container */
     max-width: 100%;
@@ -24,7 +105,12 @@ header {
     text-align: center;
 }
 
+section {
+    background: #fff;
+}
+
 footer {
     color: #ccc;
     text-align: center;
+    font-weight: 300;
 }
