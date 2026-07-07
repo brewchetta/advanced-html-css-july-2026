@@ -59,6 +59,34 @@ a {
     text-decoration: none;
 }
 
+/* LOOK FOR ANY HREFS THAT BEGIN WITH https:///www */
+a[href^="https://www"] {
+    /* background-image: url(img/icon-external-link.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 16px 16px; */
+
+    background: url(img/icon-external-link.svg) no-repeat center right / 16px 16px;
+    padding-right: 24px;
+}
+
+/* LOOK FOR HREFS THAT END WITH .pdf */
+a[href$=".pdf"] {
+    background: url(img/icon-pdf.png) no-repeat center right / 16px 16px;
+    padding-right: 24px;
+}
+
+/* LOOK FOR HREFS THAT INCLUDE youtube.com ANYWHERE */
+a[href*="youtube.com"] {
+    background: url(img/icon-youtube.svg) no-repeat center right / 16px 16px;
+    padding-right: 24px;
+}
+
+/* LOOK FOR A name THAT IS EXACTLY "learn" */
+/* a[name="learn"] {
+    color: red;
+} */
+
 nav {
     text-align: center;
     margin-bottom: 20px;
