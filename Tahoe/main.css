@@ -117,12 +117,24 @@ img {
 }
 
 main, footer, header {
-    max-width: 800px;
+    max-width: 900px;
     /* margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0; */
     margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    main {
+        display: flex;
+        gap: 1em;
+        align-items: flex-start;
+    }
+
+    section {
+        width: 30%;
+    }
 }
 
 header {
@@ -138,6 +150,13 @@ section {
     background: #fff;
     padding: 1em;
     margin-bottom: 20px;
+}
+
+/* LAST CHILD CHOOSES THE LAST p TAG IN EACH section */
+/* AFTER APPENDS A NEW PSEUDO ELEMENT AFTER EACH ANCHOR TAG */
+/* CONTENT IS WHAT THE ::AFTER ELEMENT HAS INSIDE OF IT */
+section p:last-child a::after {
+    content: " »";
 }
 
 footer {
