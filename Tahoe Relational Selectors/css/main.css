@@ -146,12 +146,19 @@ footer {
 	main {
 		max-width: 1400px;
 		display: flex;
-		align-items: flex-start;
+		align-items: stretch;
 		gap: 30px;
 		padding: 0 30px;
 	}
+
 	section {
 		margin: 0;
 		width: 33.33%;
+		margin-top: 48px;
+	}
+	
+	/* GET THE SECOND SECTION IN THE MAIN */
+	main section:nth-child(2) {
+		margin-top: 0;
 	}
 }
