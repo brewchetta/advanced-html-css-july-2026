@@ -26,7 +26,78 @@
 		<div class="columns-2">
 			<div class="column-left">
 				<h2 class="form-heading">Sign Up for More Info</h2>
-				
+
+				<!-- CRUD -->
+				<!-- CREATE - POST -->
+				<!-- READ - GET -->
+				<!-- UPDATE - PUT/PATCH -->
+				<!-- DELETE - DELETE -->
+
+				<!-- FORM -->
+				<form method="POST" action="">
+
+					<label for="volunteer-name-input">Your Name:</label>
+					<input id="volunteer-name-input" name="volunteer-name-input" type="text">
+
+					<label for="email-input">Email:</label>
+					<input id="email-input" name="email-input" type="email">
+
+					<br>
+
+					<label for="self-description">Tell us a little about yourself:</label>
+					<textarea name="self-description" id="self-description"></textarea>
+
+					<fieldset>
+						<legend>I want to volunteer for:</legend>
+
+						<!-- value is what we send to the server -->
+						<input type="radio" name="volunteer-choice" id="soup-kitchen" value="soup">
+						<label for="soup-kitchen">Soup Kitchen</label>
+
+						<br>
+
+						<input type="radio" name="volunteer-choice" id="dog-walker" value="dogs">
+						<label for="dog-walker">Doggo Walker</label>
+
+						<br>
+
+						<input type="radio" name="volunteer-choice" id="tutoring" value="tutor">
+						<label for="tutoring">School Tutor</label>
+
+					</fieldset>
+
+					<fieldset>
+						<legend>Availability</legend>
+
+						<input type="checkbox" name="availability" id="morning" value="morning">
+						<label for="morning">Morning</label>
+
+						<input type="checkbox" name="availability" id="afternoon" value="afternoon">
+						<label for="afternoon">Afternoon</label>
+
+						<input type="checkbox" name="availability" id="evening" value="evening">
+						<label for="evening">Evening</label>
+
+						<input type="checkbox" name="availability" id="night" value="night">
+						<label for="night">Midnight</label>
+
+					</fieldset>
+
+					<label for="location">Where do you want to volunteer:</label>
+					<select name="location" id="location">
+						<option selected disabled>Choose a location</option>
+						<option value="m">Manhattan</option>
+						<option value="bk">Brooklyn</option>
+						<option value="bx">Bronx</option>
+						<option value="q">Queens</option>
+						<option value="si">Staten Island</option>
+					</select>
+					
+					<input type="submit" value="Volunteer!">
+
+				</form>
+				<!-- FORM END -->
+
 			</div>
 			<aside class="column-right">
 				<h2>Volunteer Opportunities</h2>
