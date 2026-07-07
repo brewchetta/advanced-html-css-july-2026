@@ -2,6 +2,10 @@ body {
     background: #555;
     font-family: "Open Sans", sans-serif;
     line-height: 1.75;
+    margin: 0;
+    padding: 0;
+
+    /* background: repeating-linear-gradient(90deg, red, red 50px, blue 50px, blue 100px, white 100px, white 150px, blue 150px, blue 200px); */
 }
 
 h1, h2, h3 {
@@ -11,7 +15,17 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 50px;
+    /* CLAMP DECIDES THE LARGEST & SMALLEST IT CAN GET */
+    /* 40px IS THE SMALLEST */
+    /* 100px IS THE LARGEST */
+    /* 11vw IS THE IDEAL IT WILL TRY TO BE */
+    font-size: clamp(40px, 11vw, 100px);
+    background: linear-gradient(#fff, #aaf);
+    /* background: url(img/fun-year-round.jpg);
+    background-size: cover; */
+    background-clip: text;
+
+    color: transparent;
 }
 
 h2 {
@@ -48,6 +62,16 @@ a {
 nav {
     text-align: center;
     margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background: #2E6F40cc;
+    padding: 10px;
+    z-index: 1;
+    backdrop-filter: blur(5px) saturate(0%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav a {
@@ -102,16 +126,9 @@ main, footer, header {
 }
 
 header {
-    /* background-image: url(img/masthead.jpg);
-    background-position: center;
-    background-size: cover; */
     background: linear-gradient(45deg,#f007, #00f7),
     url(img/masthead.jpg) center / cover;
 
-    /* background-image: linear-gradient(#f00a, #00fa); */
-
-    /* padding-top: 50px;
-    padding-bottom: 50px; */
     padding: 50px 0;
     color: #fff;
     text-align: center;
