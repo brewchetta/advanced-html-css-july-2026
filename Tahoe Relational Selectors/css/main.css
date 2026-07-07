@@ -156,9 +156,23 @@ footer {
 		width: 33.33%;
 		margin-top: 48px;
 	}
+
+	.text-wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.price {
+		margin-top: auto;
+	}
 	
 	/* GET THE SECOND SECTION IN THE MAIN */
 	main section:nth-child(2) {
 		margin-top: 0;
+	}
+
+	main section:nth-child(2) .text-wrapper {
+		height: auto;
 	}
 }
