@@ -1,6 +1,50 @@
+/* what the heck is a variable? */
+
+/* defining a value --> this variable can be referenced later */
+
+:root {
+    /* where we put variables -- :root is the grandaddy element */
+    /* all variables will be available to all other elements */
+
+    --primary-bg-color: #ccc;
+    --section-bg-color: #fff;
+    --nav-bg-color: #2E6F40cc;
+    --primary-paragraph-color: #000;
+    --primary-font-family: "Open Sans", sans-serif;
+    --secondary-font-family: "Alfa Slab One", sans-serif;
+    --section-title-bg-color: #2fb3fe;
+    --a-tag-color: #2985d1;
+}
+
+
+/* dark mode versions of variables */
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --primary-bg-color: #555;
+        --section-bg-color: #2E6F40cc;
+        --nav-bg-color: #2E6F40cc;
+        --primary-paragraph-color: yellow;
+        --primary-font-family: "Open Sans", sans-serif;
+        --secondary-font-family: "Alfa Slab One", sans-serif;
+        --section-title-bg-color: #103f5a;
+        --a-tag-color: #a4c2da;
+    }
+
+    nav li a {
+        background: #aaa;
+        border-radius: 8px;
+    }
+
+    nav li a:hover {
+        background: #888;
+    }
+
+}
+
 body {
-    background: #555;
-    font-family: "Open Sans", sans-serif;
+    background: var(--primary-bg-color);
+    font-family: var(--primary-font-family);
     line-height: 1.75;
     margin: 0;
     padding: 0;
@@ -8,10 +52,19 @@ body {
     /* background: repeating-linear-gradient(90deg, red, red 50px, blue 50px, blue 100px, white 100px, white 150px, blue 150px, blue 200px); */
 }
 
+p {
+    color: var(--primary-paragraph-color);
+}
+
+header p {
+    color: #fff;
+}
+
 h1, h2, h3 {
-    font-family: "Alfa Slab One", sans-serif;
+    font-family: var(--secondary-font-family);
     font-weight: normal;
     line-height: 1.2;
+    width: var(--any-name-we-want);
 }
 
 h1 {
@@ -37,7 +90,7 @@ h2 {
 
 h3 {
     font-size: 24px;
-    background-color: #2fb3fe;
+    background-color: var(--section-title-bg-color);
     color: #fff;
     padding: 0.5em;
 }
@@ -55,7 +108,7 @@ section svg * {
 }
 
 a {
-    color: #2985d1;
+    color: var(--a-tag-color);
     text-decoration: none;
 }
 
@@ -92,7 +145,7 @@ nav {
     margin-bottom: 20px;
     position: sticky;
     top: 0;
-    background: #2E6F40cc;
+    background: var(--nav-bg-color);
     padding: 10px;
     z-index: 1;
     backdrop-filter: blur(5px) saturate(0%);
@@ -111,12 +164,12 @@ nav a {
 }
 
 nav li a {
-    background: #aaa;
+    /* background: #aaa; */
     border-radius: 8px;
 }
 
 nav li a:hover {
-    background: #888;
+    /* background: #888; */
 }
 
 nav a:hover, 
@@ -175,7 +228,7 @@ header {
 }
 
 section {
-    background: #fff;
+    background: var(--section-bg-color);
     padding: 1em;
     margin-bottom: 20px;
 }
