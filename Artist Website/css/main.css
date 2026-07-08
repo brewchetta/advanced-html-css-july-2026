@@ -1,3 +1,43 @@
+/* SHADOW STYLING */
+
+div.category a {
+	/* 			x    y    sharpness/blur  color */
+	box-shadow: 20px 20px 10px #000a;
+}
+
+/* @keyframes boomerang-shadow {
+	0% { 
+		text-shadow: 0px 0px 0px #FF69B4, 0px 0px 0px #0ff, 0px 0px 0px #ffd700; 
+	}
+	50% {
+		text-shadow: 3px 3px 0px #FF69B4, 6px 6px 0px #0ff, 9px 9px 0px #ffd700;
+	}
+	100% {
+		text-shadow: 0px 0px 0px #FF69B4, 0px 0px 0px #0ff, 0px 0px 0px #ffd700; 
+	}
+} */
+
+div.logo-wrapper a {
+	/* multiple shadows behind the text */
+	text-shadow: 0px 0px 0px #FF69B4, 0px 0px 0px #0ff, 0px 0px 0px #ffd700;
+	/* shadows move over the course of 1 second when hovering */
+	transition: text-shadow 1s ease-in-out;
+	/* inline block means the <a> doesn't stretch across the screen */
+	display: inline-block;
+}
+
+/* shadows move when hovering */
+div.logo-wrapper a:hover {
+	text-shadow: 3px 3px 0px #FF69B4, 6px 6px 0px #0ff, 9px 9px 0px #ffd700;
+}
+
+/* WITH THE BOOMERANG ANIMATION */
+/* div.logo-wrapper a:hover {
+	animation: boomerang-shadow 2s ease-in-out;
+} */
+
+/* PREVIOUS STYLING */
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
