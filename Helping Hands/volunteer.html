@@ -36,39 +36,49 @@
 				<!-- FORM -->
 				<form method="POST" action="">
 
-					<label for="volunteer-name-input">Your Name:</label>
-					<input id="volunteer-name-input" name="volunteer-name-input" type="text">
+					<label for="volunteer-name-input">*Your Name:</label>
+					<input id="volunteer-name-input" name="volunteer-name-input" type="text" required>
 
-					<label for="email-input">Email:</label>
-					<input id="email-input" name="email-input" type="email" placeholder="Example: bob@bob.com">
+					<label for="email-input">*Email:</label>
+					<input id="email-input" name="email-input" type="email" placeholder="Example: bob@bob.com" required>
 					
-					<label for="phone">Phone:</label>
+					<label for="phone">*Phone:</label>
 					<input id="phone" 
 						name="phone" 
 						type="tel"
 						pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-						placeholder="Example: 123-456-7890">
+						placeholder="Example: 123-456-7890" required>
 
 					<label for="self-description">Tell us a little about yourself:</label>
 					<textarea name="self-description" id="self-description" maxlength="350"></textarea>
 
 					<fieldset>
-						<legend>I want to volunteer for:</legend>
+						<legend>*I want to volunteer for:</legend>
 
 						<!-- value is what we send to the server -->
 						<div>
-							<input type="radio" name="volunteer-choice" id="soup-kitchen" value="soup">
+							<input type="radio" name="volunteer-choice" id="soup-kitchen" value="soup" required>
 							<label for="soup-kitchen">Soup Kitchen</label>
 						</div>
 
 						<div>
-							<input type="radio" name="volunteer-choice" id="dog-walker" value="dogs">
+							<input type="radio" name="volunteer-choice" id="dog-walker" value="dogs" required>
 							<label for="dog-walker">Doggo Walker</label>
 						</div>
 
 						<div>
-							<input type="radio" name="volunteer-choice" id="tutoring" value="tutor">
+							<input type="radio" name="volunteer-choice" id="tutoring" value="tutor" required>
 							<label for="tutoring">School Tutor</label>
+						</div>
+
+						<div>
+							<input type="radio" name="volunteer-choice" id="other" value="other">
+							<label for="other">Other</label>
+
+							<div class="other-choice-container">
+								<label for="other-choice">Write in what you'd like to do:</label>
+								<input type="text" name="other-choice" id="other-choice">
+							</div>
 						</div>
 
 					</fieldset>
@@ -107,6 +117,8 @@
 						<option value="q">Queens</option>
 						<option value="si">Staten Island</option>
 					</select>
+
+					<p>*required</p>
 					
 					<input type="submit" value="Volunteer!">
 
