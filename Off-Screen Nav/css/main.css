@@ -1,3 +1,52 @@
+/* NAVBAR STYLING */
+
+/* media query -- below 700px screen change to this style */
+@media (max-width: 700px) {
+	
+	nav {
+		position: fixed;
+		width: 12em;
+		height: 100%;
+		transform: translate(-12em);
+		transition: transform 0.25s;
+	}
+
+	#nav-checkbox:checked ~ nav {
+		transform: translate(0em);
+	}
+
+}
+
+/* media query -- above 701px change to this style */
+@media (min-width: 701px) {
+
+	nav ul {
+		display: flex;
+		justify-content: right;
+	}
+
+	#hamburger-icon {
+		display: none;
+	}
+
+}
+
+#nav-checkbox {
+	display: none;
+}
+
+#hamburger-icon {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: rgba(72,58,64, .92);
+	padding: 1em;
+	cursor: pointer;
+}
+
+
+/* PREVIOUS STYLING */
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
