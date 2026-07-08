@@ -6,7 +6,7 @@
 	<title>Helping Hands - Volunteer Opportunities</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=auto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Monsieur+La+Doulaise&family=Dosis:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=auto" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -40,46 +40,61 @@
 					<input id="volunteer-name-input" name="volunteer-name-input" type="text">
 
 					<label for="email-input">Email:</label>
-					<input id="email-input" name="email-input" type="email">
-
-					<br>
+					<input id="email-input" name="email-input" type="email" placeholder="Example: bob@bob.com">
+					
+					<label for="phone">Phone:</label>
+					<input id="phone" 
+						name="phone" 
+						type="tel"
+						pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+						placeholder="Example: 123-456-7890">
 
 					<label for="self-description">Tell us a little about yourself:</label>
-					<textarea name="self-description" id="self-description"></textarea>
+					<textarea name="self-description" id="self-description" maxlength="350"></textarea>
 
 					<fieldset>
 						<legend>I want to volunteer for:</legend>
 
 						<!-- value is what we send to the server -->
-						<input type="radio" name="volunteer-choice" id="soup-kitchen" value="soup">
-						<label for="soup-kitchen">Soup Kitchen</label>
+						<div>
+							<input type="radio" name="volunteer-choice" id="soup-kitchen" value="soup">
+							<label for="soup-kitchen">Soup Kitchen</label>
+						</div>
 
-						<br>
+						<div>
+							<input type="radio" name="volunteer-choice" id="dog-walker" value="dogs">
+							<label for="dog-walker">Doggo Walker</label>
+						</div>
 
-						<input type="radio" name="volunteer-choice" id="dog-walker" value="dogs">
-						<label for="dog-walker">Doggo Walker</label>
-
-						<br>
-
-						<input type="radio" name="volunteer-choice" id="tutoring" value="tutor">
-						<label for="tutoring">School Tutor</label>
+						<div>
+							<input type="radio" name="volunteer-choice" id="tutoring" value="tutor">
+							<label for="tutoring">School Tutor</label>
+						</div>
 
 					</fieldset>
 
 					<fieldset>
 						<legend>Availability</legend>
 
-						<input type="checkbox" name="availability" id="morning" value="morning">
-						<label for="morning">Morning</label>
+						<div>
+							<input type="checkbox" name="availability" id="morning" value="morning">
+							<label for="morning">Morning</label>
+						</div>
 
-						<input type="checkbox" name="availability" id="afternoon" value="afternoon">
-						<label for="afternoon">Afternoon</label>
+						<div>
+							<input type="checkbox" name="availability" id="afternoon" value="afternoon">
+							<label for="afternoon">Afternoon</label>
+						</div>
 
-						<input type="checkbox" name="availability" id="evening" value="evening">
-						<label for="evening">Evening</label>
+						<div>
+							<input type="checkbox" name="availability" id="evening" value="evening">
+							<label for="evening">Evening</label>
+						</div>
 
-						<input type="checkbox" name="availability" id="night" value="night">
-						<label for="night">Midnight</label>
+						<div>
+							<input type="checkbox" name="availability" id="night" value="night">
+							<label for="night">Midnight</label>
+						</div>
 
 					</fieldset>
 

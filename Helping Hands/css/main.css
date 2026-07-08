@@ -1,3 +1,63 @@
+/* NEW FORM STYLING */
+
+:root {
+	--primary-border-radius: 8px;
+}
+
+form {
+	border: solid #888 1px;
+	border-top: none;
+	padding: 25px;
+	border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
+}
+
+/* labels which are direct children of the form */
+/* not grandchildren */
+form > label {
+	display: block;
+	margin-top: 1em;
+}
+
+fieldset {
+	margin-top: 1em;
+}
+
+form > label:nth-child(1) {
+	margin-top: 0;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+textarea,
+select {
+	width: 100%;
+	font-size: 17px;
+	background: #eee;
+	border: none;
+	border-radius: var(--primary-border-radius);
+	padding: 0.5em;
+	/* font-family: "Jacquard 12", system-ui; */
+	/* font-family: "Monsieur La Doulaise", cursive; */
+}
+
+input[type="text"]::placeholder, 
+input[type="email"]::placeholder, 
+input[type="password"]::placeholder,
+input[type="date"]::placeholder,
+input[type="tel"]::placeholder {
+	opacity: 0.5
+}
+
+textarea {
+	resize: none;
+	height: 5em;
+}
+
+/* PREVIOUS STYLING */
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
