@@ -15,6 +15,20 @@
 		transform: translate(0em);
 	}
 
+	#nav-mask {
+		display: none;
+		opacity: 0.3;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	#nav-checkbox:checked ~ #nav-mask {
+		display: block;
+	}
+
 }
 
 /* media query -- above 701px change to this style */
@@ -43,6 +57,22 @@
 	padding: 1em;
 	cursor: pointer;
 }
+
+/* #test {
+	border: solid blue 2px;
+	width: 500px;
+	height: 500px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#inner-test {
+	border: solid red 2px;
+	height: 100%;
+	width: 100%;
+} */
 
 
 /* PREVIOUS STYLING */
