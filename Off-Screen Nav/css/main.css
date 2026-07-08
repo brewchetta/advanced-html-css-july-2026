@@ -15,6 +15,7 @@
 		transform: translate(0em);
 	}
 
+	/* INVISIBLE NAV MASK NOT ON THE SCREEN */
 	#nav-mask {
 		display: none;
 		opacity: 0.3;
@@ -25,6 +26,7 @@
 		left: 0;
 	}
 
+	/* WHEN THE NAVIGATION IS OPEN --> NAVMASK IS ON THE SCREEN */
 	#nav-checkbox:checked ~ #nav-mask {
 		display: block;
 	}
